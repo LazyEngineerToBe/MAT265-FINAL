@@ -1,0 +1,17 @@
+\subsection{Prolongement périodique}
+\begin{equation*}
+  f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos(n \frac{\pi}{L}x) +b_n \sin(n \frac{\pi}{L}x)
+\end{equation*}
+
+\begin{tabular}{llll}
+    Prolong. ordinaire & \(a_0\) & \(a_n\) & \(b_n\)\\
+    Prolong. pair & \(a_0\) & \(a_n\) & \(b_n=0\) \\
+    Prolong. impair & \(a_0=0\) & \(a_n=0\) & \(b_n\)
+\end{tabular}
+\subsubsection{TI}
+%\centering
+\(\mathbf{prlgp}(type,l,x,fn)\mid\) type: \(o,p,i\) \hfill\(\mathbf{prlgp\_dev}(type,l,x,fn)\)\\
+\centering
+\(
+    \mathbf{a0p}(L,x,fn)\hspace{1em}    \mathbf{anp}(L,x,fn)\hspace{1em}    \mathbf{bnp}(L,x,fn) 
+\)\\

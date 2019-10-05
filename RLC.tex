@@ -1,0 +1,34 @@
+\subsection{Circuit RLC}
+{\centering
+\input{fig/circuit_RLC}
+}
+\\\raggedright
+Voltage au capaciteur:
+{\centering
+%\begin{gather*}
+\(
+LC V_c^{\prime\prime} + RC V_c^{\prime} + V_c = V(t)\Longleftrightarrow
+V_c^{\prime\prime} + \frac{R}{L} V_c^{\prime} + \frac{1}{LC}V_c = \frac{V(t)}{LC}
+\)}\\
+%\end{gather*}
+Courant:
+{\centering\(
+%\begin{gather*}
+L i^{\prime\prime} + R i^{\prime} + \frac{1}{C}i = E(t)\;\;\Longleftrightarrow\;\;
+i^{\prime\prime} + \frac{R}{L} i^{\prime} + \frac{1}{LC}i = \frac{E(t)}{L}
+% \end{gather*}
+\)}\\
+Avec:
+\begin{tabular}{rlc}
+  $R$ & résistance & [$\Omega$] \\
+  $L$ & inductance & [$H$]\\
+  $C$ & capacité & [$F$]\\
+  $E(t)=V(t)$ & source de puissance & [$V$]\\
+  $V_c(t)*C = i(t_0)$ & courant à $t_0$ & [$A$]\\
+  $V_c(t_0)=i^{\prime}(t_0)$ & voltage au capaciteur à $t_0$ & [$V$]
+\end{tabular}
+
+
+\subsubsection{TI}
+\centering
+\(\mathbf{circuit}(R,L,C,E,Vc_0,I_0)\)\\

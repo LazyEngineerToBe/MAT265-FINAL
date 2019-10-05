@@ -1,0 +1,37 @@
+\section{Application des É.D. d'ordre 2}
+\subsubsection{TI}
+\centering
+\(\mathbf{solver}(\left\{p,q,r\right\}=g(t),t,y,t_0,y_0,y^{\prime}_0)\)\\
+
+\subsection{Type de régime}
+\begin{tabular}{ll}
+Régime libre & \(g(t)=0\)\\
+Régime non amorti & \(g(t)=0\) et \(b=0\)\\
+Régime libre sous-amorti & \(g(t)=0\) et \(b<2\sqrt{c} \rightarrow \Delta <0\)\\
+Régime libre sur-amorti & \(g(t)=0\) et \(b>2\sqrt{c} \rightarrow \Delta >0\)\\
+Régime libre critique & \(g(t)=0\) et \(b=2\sqrt{c} \rightarrow \Delta = 0\)\\
+Régime forcé & \(g(t)\neq 0\)
+\end{tabular}
+\raggedright
+
+\subsection{Mouv. harmonique (Ressorts)}
+\vspace{-1\baselineskip}
+\begin{gather*}
+m y^{\prime\prime} + \beta y^{\prime} + ky = g(t) \;\;\Longleftrightarrow\;\;
+y^{\prime\prime} + \frac{\beta}{m} y^{\prime} + \frac{k}{m}y = \frac{g(t)}{m}
+\end{gather*}
+Paramètres
+\begin{tabular}{rll}
+  $m$ & masse & [$kg$]\\
+  $\beta$ & coefficient d'amortissement & [$N\cdot s/m$]\\
+  $k$ & constante de rappel du ressort & [$N/m$]\\
+  $g(t)$ & force externe & [$N$]\\
+  $y(t)$ & position p/r à équilibre & [$m$]\\
+  $v(t)=\frac{dy}{dt}$ & vitesse & [$m/s$]\\
+  $a(t)=\frac{dv}{dt}$ & accélération & [$m/s^2$]
+\end{tabular}
+
+
+\subsubsection{TI}
+\centering
+\(\mathbf{ressort}(m,b,k,f,y_0,v_0)\)\\

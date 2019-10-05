@@ -1,0 +1,44 @@
+\section{Séries de Fourier}
+\subsection{Calcul des coefficients}
+
+On pose\hspace{1em}\(
+  g(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos(n\,\omega\,x) +b_n \sin(n\, \omega \,x)
+\)\\
+\raggedright
+On calcule les coefficients:
+\begin{align*}
+  a_0 &= \frac{2}{L} \int^L_0 g(x) \:dx \\
+  a_n &= \frac{2}{L} \int^L_0 g(x)\cos(n\,\omega\,x) \:dx \\
+  b_n &= \frac{2}{L} \int^L_0 g(x)\sin(n\,\omega\,x) \:dx
+\end{align*}
+Paramètres
+\begin{tabular}{rcl}
+$P$ & : & Période de $g(x)$\\
+$L$ & = & $P / 2$\\
+$\omega$ & = & $2\pi / P \Leftrightarrow 2\pi/2L \Leftrightarrow  \pi/L$ 
+\end{tabular}
+
+\subsection{Avec table}
+
+\begin{enumerate}[nosep]
+  \item Tracer le graphique de g(x)
+  \item Trouver une fonction similaire dans la table
+  \item Écrire la valeur des paramètres
+  \item Calculer les proportions
+\end{enumerate}
+
+Paramètres
+\begin{tabular}{rcl}
+\(A_g\) & : & Amplitude de \(g(x)\)\\
+\(P_g\) & : & Période de \(f(x)\)\\
+\(H\) & : & Écart en \(y\)\\
+\(c\) & : & Écart en \(x\)\\
+\(A_f\) & : & Amplitude de \( f(x) \)\\
+\(P_f\) & : & Période de \(f(x)\)
+\end{tabular}
+
+\begin{equation*}
+  g(x)= H \pm \frac{A_g}{A_f} f\bigg( \frac{P_f}{P_g} (x-c) \bigg)
+\end{equation*}
+
+On remplace dans la série \( f(x) \mid x \leftarrow \frac{P_f}{P_g} (x-c) \)

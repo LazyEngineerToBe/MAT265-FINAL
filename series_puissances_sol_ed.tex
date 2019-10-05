@@ -1,0 +1,108 @@
+\section{Série de Puissances}
+\vspace{-1\baselineskip}
+\begin{gather*}
+p(x)y^{\prime\prime} +q(x)y^{\prime}+r(x)y=0 ~~~  \left\{ \begin{array}{rcl}
+y(x_0)& =& y_0\\
+y^{\prime}(x_0) & = & y^{\prime}_0
+\end{array} \right.
+\end{gather*}
+\centering
+\begin{tabular}{rl}\hline
+    $x_0$ & $x_0$ \\
+    Points singuliers & \(p(x)=0\) ~~``\(\mathbf{cSolve}()\)'' \\
+    Si partie imaginaire & \(R=\sqrt{(x_0)^2 + \beta^2}\)\\
+    Sinon & \(R=x_0-\alpha\)\\
+    Intervalle de convergence & \(I=]\,x_0-R,\; x_0+R\,[\)\\\hline
+\end{tabular}
+\\\raggedright
+Solution de l'É.D.: ( sauf si $R=0 \Rightarrow I=\emptyset$ )
+\vspace{-0.25em}
+\begin{equation*}
+    \left. y(x)=\sum^{\infty}_{n=0} a_n (x-x_0)^n  \;\;\right| x \in ]\,x_0-R,\; x_0+R\,[
+\end{equation*}
+\vspace{-0.25em}
+\begin{enumerate}[nosep]
+    \item Si $x_0 \neq 0$, on pose $v=x\pm x_0$
+    \item On remplace $y \longleftarrow \sum{ a_n x^n}$
+    \item On obtient:
+\end{enumerate}
+\centering
+\(
+    P\sum{ (n-1)n a_n x^{n-2}} +Q\sum{n a_n x^{n-1}}+R\sum{a_n x^n}=0
+\)\\\raggedright
+
+\begin{enumerate}[nosep]
+\setcounter{enumi}{3}
+    \item On remplace $n\leftarrow (n+2), n\leftarrow (n+1)$
+    \item On isole le $x^n$ \hspace{1em}[Attention: $x\times x^{n-2}\Rightarrow x^{n-1}$]
+    \item On élimine $\Sigma$ et $x^n \;\Rightarrow\;(\Delta_{n+2}\; a_{n+2}+\Delta_{n+1}\; a_{n+1})= 0$
+    \item On isole le coefficient d'indice supérieur $a_{n+2}$
+\end{enumerate}
+
+\centering
+\(
+    a_{n+2} = \Delta_{n+1}\; a_{n+1}+\Delta_{n}\; a_{n}
+\)
+\begin{enumerate}[nosep]
+\setcounter{enumi}{7}
+    \item On remplace $n\leftarrow (n-2)$
+\end{enumerate}
+\centering
+\(
+    a_{n} = \Delta_{n-1}\; a_{n-1}+\Delta_{n-2}\; a_{n-2}
+\)
+
+\subsection{Formule de récurrence}
+% \vspace{-.75em}
+\begin{equation*}
+   a_n= \left\{ \begin{array}{ll}
+        0 & n<0 \\
+        a_0=y(x_0) & n=0\\
+        a_1=y^{\prime}(x_0) & n=1\\
+        a_n & n\geq 2
+    \end{array}\right.
+\end{equation*}
+% \begin{equation*}
+%     y(x)= 
+% \end{equation*}
+% \vspace{-.75em}
+
+\begin{enumerate}[nosep]
+\setcounter{enumi}{8}
+    \item On assemble la formule de sommation $y(x)=\Sigma\cdots$
+    \item On donne les $n$ premier termes de l'É.D.
+\end{enumerate}
+
+\subsubsection{TI}
+% \vspace{-.75em}
+\begin{equation*}
+    a(n):=\left\{ \begin{array}{ll}
+        0 & n<0 \\
+        a_0=y(x_0) & n=0\\
+        a_1=y^{\prime}(x_0) & n=1\\
+        \Delta_{n-2}\: a(n-2)+\Delta_{n-1}\; a(n-1) & n\geq 2
+    \end{array}\right.
+\end{equation*}\\
+\vspace{.125em}
+{\centering\(\mathbf{seq}(Expr,Var,Inf,Sup)\)}
+\vspace{.125em}
+% \vspace{-.75em}
+
+\subsection{Calcul des coefficients}
+\vspace{-.75\baselineskip}
+\begin{align*}
+    a_0 &= \frac{2}{P}+\int_{c-\frac{P}{2}}^{c+\frac{P}{2}} y(x) \:dx \\
+    a_n &= \frac{2}{P}+\int_{c-\frac{P}{2}}^{c+\frac{P}{2}} y(x)\cos\bigg(n\frac{2\pi}{P}x\bigg) \:dx \\
+    b_n &= \frac{2}{P}+\int_{c-\frac{P}{2}}^{c+\frac{P}{2}} y(x)\sin\bigg(n\frac{2\pi}{P}x\bigg) \:dx
+\end{align*}
+\subsubsection{TI}
+\centering
+\(
+    \mathbf{a0}(c,p,x,fn)\hspace{1em}    \mathbf{an}(c,p,x,fn)\hspace{1em}    \mathbf{bn}(c,p,x,fn) 
+\)\\
+\raggedright
+Représentation graphique
+\begin{align*}
+    f1(x) &= y(x)\,\mathbf{mod}(x,P)\\
+    f2(x)&=y(x)
+\end{align*}

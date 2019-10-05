@@ -1,0 +1,58 @@
+\section{Algorithme de Runge-Kutta}
+\raggedright
+\subsection{$1^{\mathrm{er}}$ ordre}
+
+\begin{equation*}
+    \left\{ \begin{array}{rcl}
+        y^{\prime} & = & x^2+y^2 \\
+        y(x_0) & = & y_0
+    \end{array}\right.
+\end{equation*}
+
+\subsubsection{TI}
+\menu[,]{Menu,3,8}
+\begin{equation*}
+    \left\{ \begin{array}{rcl}
+        y1^{\prime} & = & x^2+y1^2 \\
+        (x_0,y1_0) & = & y_0
+    \end{array}\right.
+\end{equation*}
+
+Puis: \menu[,]{\ldots,Runge-Kutta, Tol. erreur: 0.0001, Champ: Aucun}
+
+\subsection{$2^{\mathrm{e}}$ ordre}
+
+\begin{equation*}
+    \left\{ \begin{array}{rcl}
+        (x-5)y^{\prime\prime} +xy^{\prime}+3y & = & 0 \\
+        y(x_0) & = & y_0\\
+        y^{\prime}(x_0) & = & y^{\prime}_0
+    \end{array}\right.
+\end{equation*}
+
+%\raggedright
+
+On transforme l'É.D. en É.D. du $1^{\mathrm{er}}$ ordre.\\
+On pose: \( y=y_1 \;\mathrm{ et }\; y^{\prime}=y_2 \Longleftrightarrow y^{\prime\prime}=y^{\prime}_2 \)\\
+\subsubsection{TI}
+\centering
+\(\mathbf{de2to1}(Py^{\prime\prime} +Qy^{\prime}+Ry = 0)\)\\\raggedright
+
+\menu[,]{Menu,3,8}
+\begin{equation*}
+    \left\{ \begin{array}{rcl}
+        y1^{\prime} & = & y2 \\
+        (x_0,y1_0) & = & y_0\\
+        y2^{\prime} & = & y_2^{\prime} \quad\mathrm{(E.D.}\ 1^{er}\ \mathrm{ ordre)}\\
+        (x_0, y2_0) & = & y^{\prime}_0
+    \end{array}\right.
+\end{equation*}
+
+Puis: \menu[,]{\ldots,Runge-Kutta, Tol. erreur: 0.0001, Champ: Aucun}
+
+\subsection{Éditer les valeurs dans le tableau}
+
+\begin{tabular}{cl}
+\keys{ctrl+T} & Afficher/Quitter la table des valeurs\\
+\keys{menu+2+5} & Paramètres de la table
+\end{tabular}
